@@ -1,3 +1,0 @@
-testing nano within PowerShell
-testing if Treehouse project will be pushed to GitHub
-------
