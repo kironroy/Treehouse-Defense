@@ -1,0 +1,2 @@
+~ checking nano editor via Windows Powershell
+~ it works! =)
