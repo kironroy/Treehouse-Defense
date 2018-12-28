@@ -6,9 +6,11 @@ namespace TreehouseDefense
     {
         private readonly Path _path;
         private int _pathStep = 0;
+
+        protected virtual int StepSize { get; } = 1;
         public MapLocation Location => _path.GetLocationAt(_pathStep);
 
-        public int Health { get; private set; } = 2;
+        public virtual int Health { get; private set; } = 2;
 
         public bool HasScored { get { return _pathStep >= _path.Length; } }
 
@@ -23,8 +25,9 @@ namespace TreehouseDefense
 
         public void Move() => _pathStep += 1;
 
-        public void DecreaseHealth(int factor)
+        public virtual void DecreaseHealth(int factor)
             {
+                
                 Health -= factor;
             }
 

@@ -26,9 +26,9 @@ namespace TreehouseDefense
 
                 Invader[] invaders =
                 {
-                    new Invader(path),
-                    new Invader(path),
-                    new Invader(path),
+                    new ShieldedInvader(path),
+                    new FastInvader(path),
+                    new StrongInvader(path),
                     new Invader(path),
                 };
 
@@ -46,7 +46,7 @@ namespace TreehouseDefense
 
                 bool playerWon = level.Play();
 
-                Console.WriteLine("Player" + (playerWon ? " won" : "lost"));
+                Console.WriteLine("Player" + (playerWon ? " won" : " lost"));
             }
 
             catch(OutOfBoundsException ex)
