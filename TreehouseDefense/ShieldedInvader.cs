@@ -6,14 +6,12 @@ namespace TreehouseDefense
 {
     class ShieldedInvader : Invader
     {
-        private static Random _random = new Random();
-
         public override int Health { get; protected set; } = 2;
         public ShieldedInvader(Path path) : base(path)
         {}
         public override void DecreaseHealth(int factor)
         {
-            if(_random.NextDouble() < 0.5)
+            if(Random.NextDouble() < 0.5)
             {
                 base.DecreaseHealth(factor);
             }
